@@ -49,3 +49,7 @@ rm_list.close()
 
 
 #####
+dir = "/jdfssz1/ST_BIGDATA/Stereomics/USER/hanxiaoqing/tape/tape_220304/files"
+for root,dirs,files in os.walk(dir):
+    for file in files:
+        print(os.path.join(root,file))
