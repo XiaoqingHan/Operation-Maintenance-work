@@ -1,3 +1,4 @@
 # Operation and Maintenance work at BGI
-monitor sources, find cromwell
-Backup data to the tape library 
+## find cromwell
+## export daily data
+## backup data to the tape library 
