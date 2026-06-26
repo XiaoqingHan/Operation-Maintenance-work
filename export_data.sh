@@ -1,10 +1,10 @@
 #!bin/bash
 
 # $8 input parameters
-cat /ldfssz1/ST_BIGDATA/USER/st_bigdata/outdumpinfo/2022-05 | awk -F ' ' '{print $1,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13}' > out.csv
+cat /USER/st_bigdata/outdumpinfo/2022-05 | awk -F ' ' '{print $1,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13}' > out.csv
 #awk '{if($4=="spatialRNAvisualization_v3" && $10=="2022-05-09"){print $0} else if($4=="spatialRNAvisualization_v2" && $10=="2022-05-09"){print $0} else if($4=="spatialRNAvisualization_cell" && $10=="2022-05-09"){print $0} else if ($4=="spatialRNAvisualization_develop" && $10=="2022-05-09"){print $0}}' out.csv > out_today.csv
 awk -v date=$(date -d "-1 day" +%Y-%m-%d) '{if($3=="spatialRNAvisualization_v3" && $6==date){print $0} else if($3=="spatialRNAvisualization_v2" && $6==date){print $0} else if($3=="spatialRNAvisualization_cell" && $6==date){print $0} else if ($3=="spatialRNAvisualization_develop" && $6==date){print $0}}' out.csv > out_today.csv
-
+ui
 > cid.csv
 > frac_bin200.csv
 
