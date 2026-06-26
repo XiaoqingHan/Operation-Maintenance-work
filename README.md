@@ -1,4 +1,4 @@
-# Operation and Maintenance work at BGI
+# Operation and Maintenance work
 ### find cromwell
 ### export daily data
 ### backup data to the tape library 
